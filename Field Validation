@@ -1,1 +1,56 @@
 <!Doctype html>
+<html>
+<meta charset="utf-8">
+<head>
+<title>Enter Criteria</title>
+</head>
+<script>
+  function validator(){
+	
+		if( document.Valid.StreetAddress1.value=="")
+			{
+			alert("Put something into Street Address 1!");
+			return false;
+			}
+	
+	
+		if(document.Valid.StreetAddres2.value=="")
+		{
+		alert("Put something in Street Address 2!");
+			return false;
+			}
+		if(document.Valid.City.value=="")
+		{
+		alert("Put the city in!");
+			return false;
+			}
+			var x=document.Valid.Email.value;
+		var atpos=x.indexOf("@");
+		var dotpos=x.lastIndexOf(".");
+		if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+  {
+  alert("Not a valid e-mail address");
+  return false;
+
+}
+}
+</script>
+<body style="background-color: orange">
+<h1><strong><center>Website Validating</center></strong></h1>
+<hr />
+<hr />
+<form name=Valid>
+	Street Address 1:<input type="text" name="StreetAddress1" size="10" maxlength="50"/><br>
+	Street Address 2:<input type="text" name="StreetAddres2" size="10" maxlength="50"/><br>
+	City:<input type="text" name="City" size="10" maxlength="50"/><br>
+	State:<input type="text" name="State" size="10" maxlength="50"/><br>
+	Zipcode:<input type="text" name="Zipcode" size="10" maxlength="50"/><br>
+	Phone number:<input type="text" name="Phonenumber" size="10" maxlength="50"/><br>
+	Email Address:<input type="text" name="Email" size="10" maxlength="50"/><br>
+<input type="button" value="Validating" ONClick="validator()"/>
+</form>
+
+
+</body>
+</html>
+
